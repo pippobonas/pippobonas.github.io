@@ -50,7 +50,8 @@ jobs:
     needs: update-repos
     permissions:
       pages: write
-
+      contents: write
+      
     steps:
       - name: Download data artifact
         uses: actions/download-artifact@v4
