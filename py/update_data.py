@@ -24,7 +24,7 @@ async def download_file(url, header, dest_path, namefile=None, format=None):
 
 async def main():
 
-    DATA_DIR = "../data"
+    DATA_DIR = "./data"
     USERNAME = "pippobonas"
     
     REPO_JSON = os.path.join(DATA_DIR, "repo.json")
