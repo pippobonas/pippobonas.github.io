@@ -60,7 +60,6 @@ jobs:
           path: data/
       - name: Copy data into site
         run: |
-          rm -rf site/data
           mkdir -p site/data
           cp -r data/* site/data/
       - name: Debug site content
