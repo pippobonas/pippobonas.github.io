@@ -6,8 +6,7 @@ It also integrates **GitHub Actions** workflows for CI/CD.
 ## 🚀 Features
  - Responsive design for desktop and mobile.
  - Python script for updating project data before deploy.
- - Automatic deployment to `https://username.github.io` using GitHub Actions.
- - Linting and basic build checks before deployment.
+ - Automatic deployment to `https://pippobonasre.github.io` using GitHub Actions.
 
 ## 📦 Technologies Used
  - **HTML5**, **CSS3** & **JavaScript**
@@ -18,7 +17,6 @@ It also integrates **GitHub Actions** workflows for CI/CD.
 ## 🛠 How It Works
 1. Push changes to the `main` branch.
 2. GitHub Actions workflow runs:
-   - Linting or build steps (if configured).
    - Executes the Python script to update data resources (`py/update_data.py`).
    - Deploys the site to GitHub Pages.
 3. The site updates automatically at:  
@@ -27,7 +25,7 @@ It also integrates **GitHub Actions** workflows for CI/CD.
 ## 📂 Repository Structure
 ```
 /
-├── data/
+├── data/ #autogenerate about script python
 │   ├── preview/
 │   ├── tags/
 │   └── repo.json
@@ -47,6 +45,9 @@ It also integrates **GitHub Actions** workflows for CI/CD.
 │       └── update-data.yml
 ├── README.md           
 ```
+## Preview
+![Portfolio Preview](preview.png)
+
 ## 🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
