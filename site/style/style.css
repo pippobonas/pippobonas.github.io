@@ -415,10 +415,12 @@ footer p {
     justify-content: space-evenly;
     background: var(--theme-choice);
     padding: 0 1rem;
+    max-width: 80%;
 }
 
 .card-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    padding: 0 0.5rem;
 }
 
 .card-content p {
