@@ -24,8 +24,8 @@ jobs:
           pip install --upgrade pip
           if [ -f py/requirements.txt ]; then pip install -r py/requirements.txt; fi
 
-      - name: Run update_repos.py
-        run: python py/update_repos.py
+      - name: Run update_data.py
+        run: python py/update_data.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
