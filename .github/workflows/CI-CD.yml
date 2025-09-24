@@ -39,6 +39,11 @@ jobs:
           git add data/*
           git commit -m "Update: repos.json [skip ci]" || echo "No changes"
           git push
+      - name: Upload data artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-folder
+          path: data/
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,9 +52,11 @@ jobs:
       pages: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
+      - name: Download data artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: data-folder
+          path: data/
       - name: Copy data into site
         run: |
           rm -rf site/data
