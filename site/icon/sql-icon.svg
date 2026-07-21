@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Maschera per ritagliare le linee del database dietro al cerchio (mantiene lo sfondo trasparente) -->
+    <mask id="badge-cutout">
+      <rect x="0" y="0" width="200" height="200" fill="white" />
+      <circle cx="138" cy="138" r="34" fill="black" />
+    </mask>
+  </defs>
+
+  <!-- Struttura Database (Soli contorni blu, 100% trasparente) -->
+  <g fill="none" stroke="#0052CC" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" mask="url(#badge-cutout)">
+    <!-- Cilindro Superiore -->
+    <ellipse cx="88" cy="48" rx="48" ry="16" />
+    <path d="M 40,48 v 30 a 48,16 0 0 0 96,0 v -30" />
+    
+    <!-- Cilindro Intermedio -->
+    <path d="M 40,78 v 30 a 48,16 0 0 0 96,0 v -30" />
+    
+    <!-- Cilindro Inferiore -->
+    <path d="M 40,108 v 30 a 48,16 0 0 0 96,0 v -30" />
+  </g>
+
+  <!-- Anello del Badge Circolare (Trasparente al centro) -->
+  <circle cx="138" cy="138" r="28" fill="none" stroke="#0052CC" stroke-width="6" />
+
+  <!-- Scritta SQL Omogenea, Grassetto e Centrata -->
+  <text x="138" y="145" 
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" 
+        font-size="20" 
+        font-weight="800" 
+        fill="#0052CC" 
+        text-anchor="middle">SQL</text>
+</svg>
